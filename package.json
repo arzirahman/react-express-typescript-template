@@ -1,0 +1,25 @@
+{
+  "name": "react-express-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm start --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build:client": "npm run build --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": ["server", "client"],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
