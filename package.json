@@ -1,6 +1,6 @@
 {
   "name": "react-express-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "scripts": {
     "init": "npm install && echo Project initialized successfully",
@@ -11,14 +11,21 @@
     "build:client": "npm run build --prefix client",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:ui": "npm run db:ui --prefix api",
+    "db:migrate": "npm run db:migrate --prefix api",
+    "db:generate": "npm run db:generate --prefix api"
   },
-  "workspaces": ["server", "client"],
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "dotenv-cli": "^7.4.2"
   },
   "dependencies": {
     "dotenv": "^16.4.5"
