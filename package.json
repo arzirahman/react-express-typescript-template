@@ -1,6 +1,6 @@
 {
   "name": "react-express-boilerplate",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "scripts": {
     "init": "npm install && echo Project initialized successfully",
@@ -12,9 +12,9 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "db:ui": "npm run db:ui --prefix api",
-    "db:migrate": "npm run db:migrate --prefix api",
-    "db:generate": "npm run db:generate --prefix api"
+    "db:ui": "npm run db:ui --prefix server",
+    "db:migrate": "npm run db:migrate --prefix server",
+    "db:generate": "npm run db:generate --prefix server"
   },
   "workspaces": [
     "server",
